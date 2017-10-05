@@ -6,12 +6,11 @@
 //  Copyright © 2017 Ivan Babkin. All rights reserved.
 //
 
+// баг со сменой операции, баг с нажатием равно несколько раз
+
 #import "ViewController.h"
 
 #define NEW_NUMBER @"newNumber"
-
-#define STRONG 1
-#define WEAK 0
 
 #define SUM @"+"
 #define DIFFERENCE @"-"
@@ -27,14 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    resultLabel.adjustsFontSizeToFitWidth = YES;
     [self resetResult];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (IBAction)numberPressed:(id)sender {
     UIButton *number = (UIButton *)sender;
@@ -43,7 +37,6 @@
     } else {
         intermediateValue = [NSString stringWithFormat:@"%@%@", intermediateValue, [number accessibilityIdentifier]];
     }
-    
     resultLabel.text = intermediateValue;
 }
 
@@ -53,7 +46,6 @@
     
     if (![intermediateValue isEqualToString:NEW_NUMBER]) {
         [numbers addObject:[self numberValueFromString:intermediateValue]];
-        NSLog(@"%f", [[self numberValueFromString:intermediateValue] doubleValue]);
         intermediateValue = NEW_NUMBER;
     }
     
@@ -162,10 +154,14 @@
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     numberFormatter.alwaysShowsDecimalSeparator = NO;
     numberFormatter.minimumFractionDigits = 0;
-    numberFormatter.maximumFractionDigits = 5;
+    numberFormatter.maximumFractionDigits = 8;
     numberFormatter.minimumIntegerDigits = 1;
-    NSLog(@"result %@", result);
     resultLabel.text = [NSString stringWithFormat:@"%@", [numberFormatter stringFromNumber:result]];
  }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

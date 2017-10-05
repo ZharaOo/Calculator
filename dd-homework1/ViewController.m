@@ -7,16 +7,9 @@
 //
 
 #import "ViewController.h"
-
-#define NEW_NUMBER @"newNumber"
-
-#define SUM @"+"
-#define DIFFERENCE @"-"
-#define MULTIPLICATION @"*"
-#define DIVISION @"/"
+#import "Constants.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -30,7 +23,7 @@
 
 - (IBAction)numberPressed:(id)sender {
     UIButton *number = (UIButton *)sender;
-    if ([intermediateValue isEqualToString:@"0"] || [intermediateValue isEqualToString:NEW_NUMBER]) {
+    if ([intermediateValue isEqualToString:ZERO] || [intermediateValue isEqualToString:NEW_NUMBER]) {
         intermediateValue = [NSString stringWithFormat:@"%@", [number accessibilityIdentifier]];
     } else {
         intermediateValue = [NSString stringWithFormat:@"%@%@", intermediateValue, [number accessibilityIdentifier]];
@@ -120,7 +113,7 @@
 }
 
 - (IBAction)changeOfSign:(id)sender {
-    if (![intermediateValue isEqualToString:NEW_NUMBER] && ![intermediateValue isEqualToString:@"0"]) {
+    if (![intermediateValue isEqualToString:NEW_NUMBER] && ![intermediateValue isEqualToString:ZERO]) {
         if ([intermediateValue characterAtIndex:0] == '-') {
             intermediateValue = [intermediateValue substringFromIndex:1];
         } else {
@@ -134,8 +127,8 @@
     numbers = [NSMutableArray new];
     actions = [NSMutableArray new];
     
-    resultLabel.text = @"0";
-    intermediateValue = @"0";
+    resultLabel.text = ZERO;
+    intermediateValue = ZERO;
 }
 
 - (IBAction)resetResult:(id)sender {

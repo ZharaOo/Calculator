@@ -2,7 +2,7 @@
 //  CalculatorButton.m
 //  dd-homework1
 //
-//  Created by babi4_97 on 06.10.2017.
+//  Created by babi4_97 on 05.10.2017.
 //  Copyright © 2017 Ivan Babkin. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 @implementation CalculatorButton
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (void)layoutSubviews {
+    [super layoutSubviews];
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = self.frame.size.height / 2;
 }

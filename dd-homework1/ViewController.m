@@ -6,8 +6,6 @@
 //  Copyright © 2017 Ivan Babkin. All rights reserved.
 //
 
-// баг со сменой операции, баг с нажатием равно несколько раз
-
 #import "ViewController.h"
 
 #define NEW_NUMBER @"newNumber"

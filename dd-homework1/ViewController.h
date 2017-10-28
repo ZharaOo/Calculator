@@ -7,22 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController {
-    NSString *intermediateValue;
-    NSMutableArray *numbers;
-    
-    NSMutableArray *actions;
-}
+#import "Calculator.h"
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-
-- (IBAction)numberPressed:(id)sender;
-- (IBAction)mathActionPressed:(id)sender;
-- (IBAction)equalsPressed:(id)sender;
-- (IBAction)resetResult:(id)sender;
-- (IBAction)separationPointPressed:(id)sender;
-- (IBAction)changeOfSign:(id)sender;
-
 @end
 

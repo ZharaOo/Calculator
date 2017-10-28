@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C82E71B1F98EACD007F3E8D /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C82E71A1F98EACD007F3E8D /* Calculator.m */; };
 		2CE221A31F863D17001EE8D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE221A21F863D17001EE8D7 /* AppDelegate.m */; };
 		2CE221A61F863D17001EE8D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE221A51F863D17001EE8D7 /* ViewController.m */; };
 		2CE221A91F863D17001EE8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CE221A71F863D17001EE8D7 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C82E7191F98EACD007F3E8D /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		2C82E71A1F98EACD007F3E8D /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		2CB5E77C1F86EE19001C4923 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2CE2219E1F863D17001EE8D7 /* dd-homework1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dd-homework1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE221A11F863D17001EE8D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				2CB5E77C1F86EE19001C4923 /* Constants.h */,
 				2CE221A41F863D17001EE8D7 /* ViewController.h */,
 				2CE221A51F863D17001EE8D7 /* ViewController.m */,
+				2C82E7191F98EACD007F3E8D /* Calculator.h */,
+				2C82E71A1F98EACD007F3E8D /* Calculator.m */,
 				2CE221B71F86E1C5001EE8D7 /* CalculatorButton.h */,
 				2CE221B81F86E1C5001EE8D7 /* CalculatorButton.m */,
 				2CE221A71F863D17001EE8D7 /* Main.storyboard */,
@@ -153,6 +158,7 @@
 				2CE221B11F863D17001EE8D7 /* main.m in Sources */,
 				2CE221A31F863D17001EE8D7 /* AppDelegate.m in Sources */,
 				2CE221B91F86E1C5001EE8D7 /* CalculatorButton.m in Sources */,
+				2C82E71B1F98EACD007F3E8D /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

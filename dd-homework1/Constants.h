@@ -13,7 +13,7 @@
 
 #define SUM @"+"
 #define DIFFERENCE @"-"
-#define MULTIPLICATION @"*"
+#define MULTIPLICATION @"X"
 #define DIVISION @"/"
 
 #define ZERO @"0"
